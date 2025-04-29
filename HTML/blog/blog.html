@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio Daniel Fernades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #136534;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3a5795;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        article {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            color: #4b6cb7;
+            margin-bottom: 10px;
+        }
+
+        article h3 {
+            color: #4b6cb7;
+            margin: 20px 0 10px;
+        }
+
+        .data {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        figcaption {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 8px;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        article ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h3 {
+            color: #4b6cb7;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        aside ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        aside li {
+            margin-bottom: 8px;
+        }
+
+        aside a {
+            color: #4b6cb7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        aside a:hover {
+            color: #3a5795;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            article, aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="">GitHub</a></li>
+                <li><a href="">Linkedin</a></li>
+                <li><a href="">Projetos em Destaque</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Daniel Fernandes</h2>
+            <p class="data">Última atualização: 29 de Abril de 2025</p>
+            
+            <figure>
+                <img src="https://avatars.githubusercontent.com/u/120675056?v=4" alt="Daniel Fernandes" width="300" height="200">
+                <figcaption>Daniel Fernandes</figcaption>
+            </figure>
+            
+            <section>
+                <h3>PERFIL PROFISSIONAL</h3>
+                <p>
+                    Sou desenvolvedor back-end com foco em Java e no ecossistema Spring Boot, atuando na construção e manutenção de APIs 
+                    robustas e escaláveis. Tenho experiência com bancos de dados relacionais, especialmente PostgreSQL, utilizando SQL 
+                    para modelagem e manipulação eficiente dos dados. Utilizo o Git para versionamento de código e colaboração em equipe, 
+                    sempre buscando seguir boas práticas de desenvolvimento, como código limpo, modularidade e reutilização. Estou em 
+                    constante evolução profissional, atento às novas tendências e tecnologias que possam agregar valor às soluções que 
+                    desenvolvo.
+                </p>
+            </section>
+            
+            <section>
+                <h3>Tecnoligas e Ferramentas</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>PostgreSQL</li>
+                    <li>JWT</li>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>JUnit</li>
+                    <li>AWS</li>
+                </ul>
+            </section>
+        </article>
+
+        <aside>
+            <h3>Artigos escritos</h3>
+            <ul>
+                <li><a href="">Segurança e Autenticação em Aplicações Java</a></li>
+                <li><a href="">Como Fazer o Deploy de uma Aplicação Java</li>
+                <li><a href="">Padrão MVC em Java</a></li>
+                <li><a href="">Conhecendo a Programação Orientada a Objetos em Java</a></li>
+            </ul>
+            
+            <h3>Cursos</h3>
+            <ul>
+                <li><a href="">Programação Orientada a Objetos em Java</a></li>
+                <li><a href="">Criando uma API REST com Spring Boot</a></li>
+                <li><a href="">Docker</a></li>
+                <li><a href="">SQL para inicianres</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; Portfólio Daniel Fernades. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
