@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clube de Regatas Vasco da Gama</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+                background-color: #F2F2F2;
+                color: #333;
+                line-height: 1.6;
+
+            }
+            header {
+                background-color:#111;
+                color: #fff;
+                padding: 60px 20px;
+                text-align: center;
+            }
+            
+            nav {
+                display: flex;
+                background-color:#202020;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                justify-content: center;
+
+            }
+
+            nav a {
+                padding: 14px 20px;
+                text-decoration: none;
+                color: #fff;
+            }
+            nav a:hover {
+                background-color: #333;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            aside {
+                flex: 30%;
+                background-color: #D9D9D9;
+                padding: 20px;
+            }
+            
+            main {
+                flex: 70%;
+                background-color: #F2F2F2;
+                padding: 20px;
+            }
+            section {
+                margin-bottom: 20px;
+            }
+
+            .escudo-vasco-da-gama{
+                background-color: #F2F2F2;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+
+            }
+
+            .estadio-vasco-da-gama{
+                background-color: #F2F2F2;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .dinamite{
+                background-color: #F2F2F2;
+                width: 50%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .romario{
+                background-color: #F2F2F2;
+                width: 50%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .edmundo{
+                background-color: #F2F2F2;
+                width: 50%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .juninho{
+                background-color: #F2F2F2;
+                width: 50%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .liberdadores{
+                background-color: #F2F2F2;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+
+            body.tema-escuro {
+                background-color: #121212;
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro header {
+                background-color: #1a1a1a;
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro nav {
+                background-color: #333;
+                
+            }
+
+            body.tema-escuro nav a {
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro nav a:hover {
+             background-color: #333;
+            }
+
+            body.tema-escuro aside {
+                background-color: #2b2b2b;
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro main {
+                background-color: #1c1c1c;
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro footer {
+                background-color: #1a1a1a;
+                color: #f2f2f2;
+            }
+
+            body.tema-escuro .escudo-vasco-da-gama,
+            body.tema-escuro .estadio-vasco-da-gama,
+            body.tema-escuro .dinamite,
+            body.tema-escuro .romario,
+            body.tema-escuro .edmundo,
+            body.tema-escuro .juninho,
+            body.tema-escuro .liberdadores {
+                background-color: #2b2b2b;
+            }
+
+            .tema-bt {
+                background-color: #333;
+                color: #f2f2f2;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 700px) {
+                nav .container {
+                    flex-direction: column;
+                }
+            }
+
+        </style>
+        
+
+    </head>
+
+    <body>
+        <div style="background:#0D0D0D; padding: 5px;" >
+            <p style="color:#F2F2F2; text-align: center;">Conheça um pouco sobre gigante da colina</p>
+        </div>
+
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Clube de Regatas Vasco da Gama</h1>
+            <p>Um dos clubes mais tradicionais do futebol brasileiro, com história de glórias e lutas dentro e fora dos campos.</p>
+        </header>
+        
+        <!--Links de navegação-->
+        <nav>
+            <a href="#Historia">História</a>
+            <a href="#Conquistas">Conquistas</a>
+            <a href="#Idolos">Ídolos</a>
+            <a href="#Estadio">Estádio</a>
+        </nav>
+
+        <!-- Mudar tema -->
+         <div style="text-align: right; padding: 10px;">
+            <button class = "tema-bt" onclick="alternarTema()">🌙 Mudar Tema</button>
+        </div>
+
+
+        <div class="container">
+            <!-- Barra lateral -->
+             <aside>
+                <h2>Sobre o Clube</h2>
+                <img src="https://static.dicionariodesimbolos.com.br/upload/60/81/conheca-o-significado-do-escudo-do-vasco-da-gama-5_xl.png" alt="Escudo Vasco da Gama"; class="escudo-vasco-da-gama">
+                <p>Fundação: 21 de agosto de 1898.</p>
+                <p>Localização: Rio de Janeiro, Brasil.</p>
+                <p>Estádio: Estádio São Januário.</p>
+                <p>Mascote: Almirante.</p>
+                </h2>
+
+                <h2 id ="Conquistas">Conquistas</h2>
+                <ul>
+                    <li>Campeonato Brasileiro: 4 vezes</li>
+                    <li>Copa do Brasil: 1 vez</li>
+                    <li>Copa Libertadores: 1 vez</li>
+                    <li>Campeonato Carioca: 24 vezes</li>
+                </ul>
+                <img src="https://s2-ge.glbimg.com/5Iem9Rm8KAXB6xMDQYiDiUGbMaM=/0x0:1600x1011/984x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2018/08/24/pedrinho_vasco.jpg" alt="Título Libertadores"; class="liberdadores">
+
+
+             </aside>
+
+            <!-- Conteúdo principal -->
+             <main>
+                <section>
+                    <h2 id="Historia">História</h2>
+                    <h3>Fundação (1898–1915)</h3>
+                    <p>
+                        Fundado em 1898 por imigrantes portugueses como clube de remo, o Vasco destacou-se nesse esporte, 
+                        conquistando títulos como o Campeonato Carioca de Remo. Em 1915, incorporou o Lusitânia Sport Club e 
+                        passou a ter um departamento de futebol.
+                    </p>
+
+                    <h3>Camisas Negras e a Luta Contra o Racismo (1922–1934)</h3>
+                    <p>
+                        O Vasco se destacou por incluir jogadores negros, pobres e operários, conquistando o título carioca de 
+                        1923 com o time conhecido como "Camisas Negras". Em 1924, recusou-se a excluir atletas discriminados 
+                        pela AMEA, escrevendo a histórica "Resposta Histórica" contra o racismo.
+                    </p>
+
+                    <h3>Expresso da Vitória (1942–1954)</h3>
+                    <p>
+                        Com Ademir de Menezes como destaque, o Vasco dominou o futebol carioca e venceu o Campeonato 
+                        Sul-Americano de Campeões de 1948, torneio precursor da Libertadores.
+                    </p>
+
+                    <h3>Domínio Mundial (1955–1969)</h3>
+                    <p>
+                        O clube venceu o Real Madrid na final do Torneio de Paris de 1957 e aplicou histórica goleada sobre o
+                         Barcelona. Conquistou títulos como o Torneio Rio-São Paulo e a primeira Taça Guanabara.
+                    </p>
+
+                    <h3>Era Dinamite e a SeleVasco (1970–1989)</h3>
+                    <p>
+                        Surgiram ídolos como Roberto Dinamite. O Vasco foi campeão brasileiro em 1974 e 1989, além de diversos 
+                        títulos estaduais e torneios internacionais.
+                    </p>
+
+                    <h3>Centenário e Libertadores (1990–2000)</h3>
+                    <p>
+                        Com ídolos como Edmundo e Juninho Pernambucano, o Vasco conquistou o Brasileirão de 1997 e a 
+                        Libertadores em 1998, ano do centenário. Também venceu a Copa Mercosul e o Brasileirão de 2000.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="Idolos">Ídolos</h2>
+                    <h3>Roberto Dinamite</h3>
+                    <p>
+                        Maior artilheiro da história do clube, com mais de 700 gols. É considerado o maior ídolo vascaíno de 
+                        todos os tempos.
+                    </p>
+                    <img src="https://s2-ge.glbimg.com/f8LqvaBe0vwH3SNyGLgqmX3HH8I=/0x0:638x480/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/K/g/nRPNx7TeywojJm6YiwxQ/lance.jpeg" alt="Roberto Dinamite"; class="dinamite">
+
+
+                    <h3>Romário</h3>
+                    <p>
+                        O "Baixinho" fez história no Vasco nos anos 1980 e depois retornou para liderar o time campeão 
+                        brasileiro de 2000.
+                    </p>
+                    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2019/11/14/5dcd6fc8e7d84.jpeg" alt="Romário"; class="romario">
+
+                    <h3>Edmundo</h3>
+                    <p>
+                        O "Animal" foi um dos principais nomes do time vascaíno campeão da Libertadores e do Mundial em 1998.
+                    </p>
+                    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2021/03/28/6060dd4b07d32.jpeg" alt="Edmundo"; class="edmundo">
+
+                    <h3>Juninho Pernambucano</h3>
+                    <p>
+                        O "Reizinho" é um dos maiores ídolos do clube, conhecido por suas cobranças de falta e liderança em 
+                        campo.
+                    </p>
+                    <img src="https://ogimg.infoglobo.com.br/in/24432695-207-28e/FT1086A/35442224_ES-localSao-PauloSP29-06-2011-Campeonato-Brasileiro-2011Corinthians-X-Vasco.jpg" alt="Juninho Pernambucano"; class="juninho">
+                </section>
+
+                <section>
+                    <h2 id="Estadio">São Januário</h2>
+                    <p>
+                        O Estádio Vasco da Gama, popularmente conhecido como São Januário, foi inaugurado em 21 de abril de 
+                        1927 e é um dos estádios mais tradicionais do Brasil. Localizado no bairro de São Cristóvão, 
+                        no Rio de Janeiro, São Januário tem capacidade atual para cerca de 22 mil espectadores. 
+                        Foi o primeiro estádio construído em concreto armado no Brasil e, durante muito tempo, 
+                        foi o maior estádio do país. Além de jogos de futebol, São Januário já foi palco de eventos 
+                        importantes na história do Brasil, incluindo discursos de presidentes e manifestações culturais.
+                    </p>
+                    <img src="https://www.netvasco.com.br/news/noticias16/arquivos/20220730-161159-1-1-.jpg" alt="Estádio São Januário"; class="estadio-vasco-da-gama">
+                </section>
+             </main>
+        </div>
+
+        <footer style="background:#0D0D0D; padding: 5px;">
+            <p style="color:#F2F2F2; text-align: center;">Clube de Regatas Vasco da Gama - Todos os direitos reservados</p>
+
+        <script>
+            function alternarTema() {
+               document.body.classList.toggle('tema-escuro');
+            }
+        </script>
+    </body>
+
+</html>
