@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Notificação de Produtos</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -19,7 +19,7 @@
             padding: 2rem;
         }
 
-        h1{
+        h1 {
             font-size: 2.25rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -43,7 +43,7 @@
             display: block;
         }
 
-        .card {
+        .card-header { 
             display: flex;
             justify-content: flex-end;
             margin-bottom: 0.5rem;
@@ -61,49 +61,51 @@
         }
 
         .fechar-btn:hover {
-            color: #6b7280;
+            color: #4b5563;
         }
 
-        .card{
+        .card-content { 
             display: flex; 
             flex-direction: column; 
         }
 
-        .card h3 {
+        .card-content h3 { 
             font-size: 1.25rem; 
             font-weight: 600; 
             margin-bottom: 0.25rem; 
             color: #111827; 
         }
 
-        .card p {
+        .card-content p { 
             font-size: 0.875rem; 
             color: #374151; 
             margin-bottom: 0;
         }
 
     </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Camisas</h1>
+        <p>Camisa Vasco da gama 600R$</p>
+        <p>Camisa Flamengo 650R$</p>
+        <p>Camisa Botafogo 500R$</p>
+        <p>Camisa Fluminense 400R$</p>
+        <p>Camisa São Paulo 700R$</p>
+        <p>Camisa Palmeiras 600R$</p>
+        <p>Camisa Grêmio 550R$</p>
+        <p>Camisa Corinthians 620R$</p>
+    </div>
 
-    <body>
-        <div class="container">
-            <h1>Camias</h1>
-            <p>Camisa Vasco da gama 600R$</p>
-            <p>Camisa Flamengo 650R$</p>
-            <p>Camisa Botafogo 500R$</p>
-            <p>Camisa Fluminense 400R$</p>
-            <p>Camisa São Paulo 700R$</p>
-            <p>Camisa Palmeiras 600R$</p>
+    <div id="card-notifica" class="card-notifica">
+        <div class="card-header">
+            <button class="fechar-btn" onclick="document.getElementById('card-notifica').style.display='none'">X</button>
         </div>
 
-        <div class="card-notifica">
-            <div class="card">
-                <button class="fechar-btn" onclick="document.getElementById('card-notifica').style.display='none'">X</button>
-            </div>
-
-            <div class="card-body">
-                <h3>Novidade!</h3>
-                <p>Novos produtos!</p>
-            </div>
+        <div class="card-content">
+            <h3>Novidade!</h3>
+            <p>Novos produtos!</p>
         </div>
-    </body>
+    </div>
+</body>
 </html>
