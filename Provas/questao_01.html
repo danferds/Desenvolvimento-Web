@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisas Históricas do Brasileirão</title>
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; 
+            background-color: #f0f2f5;
+        }
+
+        header {
+            background-color: #2c3e50; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px; 
+            margin: 10px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            margin: 10px;
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+
+        aside {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            width: 30%; 
+            box-sizing: border-box; 
+            border-radius: 8px 0 0 8px; 
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        aside ul {
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+
+        aside li {
+            margin-bottom: 5px; 
+        }
+
+        aside a {
+            color: #ecf0f1; 
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block; 
+        }
+
+        aside a:hover {
+            background-color: #2980b9; 
+        }
+
+        main {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 70%; 
+            box-sizing: border-box; 
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+        }
+
+        section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #bdc3c7; 
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto; 
+            overflow: hidden; 
+            border-radius: 8px; 
+            margin-bottom: 15px; 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            background-color: #95a5a6; 
+        }
+
+        .image-container img {
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+            border-radius: 8px;
+            display: block; 
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 10px;
+            border-top: 4px solid #3498db; 
+            border-radius: 8px; 
+            margin: 10px;
+        }
+
+        footer a {
+            color: #3498db; 
+            text-decoration: none;
+        }
+
+        
+        @media (max-width: 400px) {
+            .main-container {
+                flex-direction: column; 
+            }
+
+            aside, main {
+                width: 100%; 
+                border-radius: 8px; 
+            }
+
+            aside {
+                margin-bottom: 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Camisas Históricas do Brasileirão</h1>
+    </header>
+
+    <div class="main-container">
+        <aside>
+            <h2>Menu de navegação</h2>
+            <nav>
+                <ul>
+                    <li><a href="#camisa-vasco">Camisa do Vasco da Gama de 2000</a></li>
+                    <li><a href="#camisa-spfc">Camisa do São Paulo de 2005</a></li>
+                    <li><a href="#camisa-fla">Camisa do Flamengo de 1987</a></li>
+                    <li><a href="#camisa-palmeiras">Camisa do Palmeiras de 1994</a></li>
+                    <li><a href="#camisa-corinthians">Camisa do Corinthians 1990</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="camisa-vasco">
+                <h2>Camisa do Vasco da Gama de 2000</h2>
+                <p>
+                    Uma camisa tão histórica quanto rara! O Vasco tinha a marca do sabão em pó Ace como patrocínio,
+                    mas o então presidente Eurico Miranda decidiu colocar, de graça, a logomarca do canal televisivo
+                    SBT apenas para provocar a Rede Globo - a quem o dirigente culpava pelo adiamento da final contra
+                    o São Caetano, que posteriormente seria batido pelo Cruzmaltino.
+                </p>
+                <div class="image-container">
+                    <img src="https://assets.goal.com/images/v3/blt84c08bee9be336b9/8e2e5a0d5d26b54a1c2f385d3a393e1f1b0c2bcb.jpg?auto=webp&format=pjpg&width=1920&quality=60" alt="[Image of Camisa do Vasco da Gama de 2000]">
+                </div>
+            </section>
+
+            <section id="camisa-spfc">
+                <h2>Camisa do São Paulo de 2005</h2>
+                <p>
+                    A camisa do São Paulo de 2005 é uma das mais icônicas da história do clube.
+                    Com o patrocínio da LG, a camisa trazia o famoso escudo do Tricolor Paulista e
+                    foi usada durante a conquista da Copa Libertadores daquele ano.
+                </p>
+                <div class="image-container">
+                    <img src="https://assets.goal.com/images/v3/blt2d6f2eb201bcb657/ad3450b613d7ef3f84be4618eae01c52ae9003a3.jpg?auto=webp&format=pjpg&width=1920&quality=60" alt="[Image of Camisa do São Paulo de 2005]">
+                </div>
+            </section>
+
+            <section id="camisa-fla">
+                <h2>Camisa do Flamengo de 1987</h2>
+                <p>
+                    As listras mais largas foram a tendência na camisa do Flamengo da década de 80, na qual os patrocínios
+                    viraram praticamente uma obrigação para os principais clubes. Em 1987, a conquista da Copa União se deu
+                    com uma das marcas que mais acompanharam o 'Manto' ao longo dos anos: a logo da Lubrax, da Petrobrás.
+                </p>
+                <div class="image-container">
+                    <img src="https://assets.goal.com/images/v3/blt8d87fe8a5278c275/da8d04d13854711403fb9622e19d52dbe2cdccc5.jpg?auto=webp&format=pjpg&width=1920&quality=60" alt="[Image of Camisa do Flamengo de 1987]">
+                </div>
+            </section>
+
+            <section id="camisa-palmeiras">
+                <h2>Camisa do Palmeiras de 1994</h2>
+                <p>
+                    Para marcar o início da parceria milionária com a Parmalat, o Palmeiras revolucionou o seu uniforme,
+                    que ganhou finas listras em branco. Foi desta forma que o Alviverde conquistou o bicampeonato em 1993
+                    e 94.
+                </p>
+                <div class="image-container">
+                    <img src="https://assets.goal.com/images/v3/bltd28f62ce58ea68dc/d0f0ac89168e18433650eb1ed2315a11dafe49f9.jpg?auto=webp&format=pjpg&width=1920&quality=60" alt="[Image of Camisa do Palmeiras de 1994]">
+                </div>
+            </section>
+
+            <section id="camisa-corinthians">
+                <h2>Camisa do Corinthians 1990</h2>
+                <p>
+                    Uma camisa simples, que refletia muito bem a tendência que seguiria na década de 1990: uniformes
+                    largos e feitos completamente com materiais sintéticos. O patrocínio da Kalunga é, até hoje, um dos
+                    mais lembrados na história do Timão, que naquele ano conquistou o Brasileirão pela primeira vez.
+                </p>
+                <div class="image-container">
+                    <img src="https://assets.goal.com/images/v3/blt9ce4315ae1e6548a/47ea36aa6f73429521fa8a45dafc72c54a3fd0d8.jpg?auto=webp&format=pjpg&width=1920&quality=60" alt="[Image of Camisa do Corinthians 1990]">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="mailto:danieles@ufc.br">danieles@ufc.br</a></p>
+        <p>Todos os direitos reservados &copy; 2025.1</p>
+    </footer>
+</body>
+</html>
