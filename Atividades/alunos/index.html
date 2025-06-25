@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alunos</title>
+</head>
+<body>
+  <h1>Alunos: Universidade Federal do Ceará</h1>
+  <p>Média dos IRAs: <span id="media"></span></p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Curso</th>
+        <th>IRA</th>
+      </tr>
+    </thead>
+    <tbody id="tabela"></tbody>
+  </table>
+
+  <script>
+    async function carregarAlunos() {
+      try {
+        const resposta = await fetch('http://localhost:3000/alunos');
+        const alunos = await resposta.json();
+
+        const soma = alunos.reduce((acc, a) => acc + a.ira, 0);
+        const media = (soma / alunos.length).toFixed(2);
+        document.getElementById('media').textContent = media;
+
+        const tbody = document.getElementById('tabela');
+        alunos.forEach(a => {
+          const linha = document.createElement('tr');
+          linha.innerHTML = `
+            <td>${a.nome}</td>
+            <td>${a.curso}</td>
+            <td>${a.ira}</td>
+          `;
+          tbody.appendChild(linha);
+        });
+      } catch (err) {
+        console.error('Erro ao carregar alunos:', err);
+      }
+    }
+
+    window.onload = carregarAlunos;
+  </script>
+</body>
+</html>
