@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>COVID - Estados Brasileiros</title>
+  <style>
+
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #d4edda; }
+    .acima-media { background-color: #fdd; }
+    .maior-relacao { background-color: #cfc; }
+    .menor-relacao { background-color: #ccf; }
+    th.estado, td.estado { background-color: #d4edda; font-weight: bold; }
+    .top5 { background-color: #e6ccff !important; }
+  </style>
+</head>
+<body>
+  <h1>COVID-19 dos Estados Brasileiros</h1>
+  <table id="tabela-estados">
+    <thead>
+      <tr>
+        <th class="estado">Estado</th>
+        <th>UF</th>
+        <th>Casos</th>
+        <th>Suspeitos</th>
+        <th>Mortes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+  </table>
+  <script>
+    fetch('https://covid19-brazil-api.vercel.app/api/report/v1')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector('#tabela-estados tbody');
+        const tfoot = document.querySelector('#tabela-estados tfoot');
+
+        let totalCasos = 0, totalSuspeitos = 0, totalMortes = 0;
+        let maiorRelacao = -1, menorRelacao = Infinity;
+        let maiorEstado = '', menorEstado = '';
+
+        const estadosOrdenados = [...data.data].sort((a, b) => b.cases - a.cases);
+        const top5UFs = estadosOrdenados.slice(0, 5).map(e => e.uf);
+
+        data.data.forEach(estado => {
+          totalCasos += estado.cases;
+          totalSuspeitos += estado.suspects;
+          totalMortes += estado.deaths;
+
+          let relacao = estado.cases / (estado.deaths || 1);
+
+          if (relacao > maiorRelacao) {
+            maiorRelacao = relacao;
+            maiorEstado = estado.uf;
+          }
+
+          if (relacao < menorRelacao) {
+            menorRelacao = relacao;
+            menorEstado = estado.uf;
+          }
+        });
+
+        const mediaCasos = totalCasos / data.data.length;
+        const mediaSuspeitos = totalSuspeitos / data.data.length;
+        const mediaMortes = totalMortes / data.data.length;
+
+        data.data.forEach(estado => {
+          const tr = document.createElement('tr');
+          if (top5UFs.includes(estado.uf)) {
+            tr.classList.add('top5');
+            
+          }
+
+          tr.innerHTML = `
+            <td class="estado">${estado.state}</td>
+            <td>${estado.uf}</td>
+            <td>${estado.cases}</td>
+            <td>${estado.suspects}</td>
+            <td>${estado.deaths}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        tfoot.innerHTML = `
+          <tr>
+            <td colspan="2"><strong>Médias:</strong></td>
+            <td>${mediaCasos.toFixed(1)}</td>
+            <td>${mediaSuspeitos.toFixed(1)}</td>
+            <td>${mediaMortes.toFixed(1)}</td>
+          </tr>
+          <tr>
+            <td colspan="5">Maior relação Casos/Mortes: ${maiorEstado} (${maiorRelacao.toFixed(2)})</td>
+          </tr>
+          <tr>
+            <td colspan="5">Menor relação Casos/Mortes: ${menorEstado} (${menorRelacao.toFixed(2)})</td>
+          </tr>
+        `;
+      });
+  </script>
+</body>
+</html>
